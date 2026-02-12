@@ -14,14 +14,17 @@
             background-color:green;
         }
     </style>
-    <header></header>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
     <body>
         <button class="boton-prueba">CLICK ME</button>
+        <script>
+            var element = $('.boton-prueba');
+            element.on('click',function(){
+                element.width(element.width()*1.2);
+                element.height(element.height()*1.2);
+            });
+        </script>
     </body>
-    <script>
-        var element = $('.boton-prueba');
-        element.onclick(()=>{
-            element.width(element.attr('width')*1.2);
-        })
-    </script>
 </html>
