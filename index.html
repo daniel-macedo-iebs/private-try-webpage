@@ -1,11 +1,27 @@
 <html>
     <style>
         .boton-prueba{
-            
+            width:200px;
+            height:100px;
+            background-color:black;
+            color:white;
+            border:2px solid;
+            border-color:white;
+            cursor:pointer;
+        }
+        
+        html{
+            background-color:green;
         }
     </style>
     <header></header>
     <body>
         <button class="boton-prueba">CLICK ME</button>
     </body>
+    <script>
+        var element = $('.boton-prueba');
+        element.onclick(()=>{
+            element.width(element.attr('width')*1.2);
+        })
+    </script>
 </html>
