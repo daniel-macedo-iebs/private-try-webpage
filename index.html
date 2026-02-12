@@ -43,9 +43,12 @@
             var element = $('.boton-prueba');
             var firstpic = $('.first-pic');
             var secondpic = $('.second-pic');
+            var botonprueba = $('.boton-prueba');
             element.on('click',function(){
                 firstpic.hide();
                 secondpic.show();
+                botonprueba.text("HURRAY!");
+                botonprueba.css('font-size','30px');
             });
         </script>
     </body>
