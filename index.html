@@ -14,17 +14,38 @@
         html{
             background-color:green;
         }
+
+        .main-body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .second-pic{
+            display: none;
+        }
+
+        .pic{
+            max-width: 200px;
+        }
     </style>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
-        <button class="boton-prueba">CLICK ME</button>
+        <div class="main-body">
+            <img class="first-pic pic" src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyZnh6ZmZtbHNrZnBrZTUycnBkdm9pMWRqOHRjdDhkOG84dWJvMmcxOCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/eHWUyxudOQGCulzFFR/200w.gif"/>
+            <img class="second-pic pic" src="https://media.baamboozle.com/uploads/images/436228/1628060927_64120_gif-url.gif"/>
+            <button class="boton-prueba">CLICK ME</button>
+        </div>
         <script>
             var element = $('.boton-prueba');
+            var firstpic = $('.first-pic');
+            var secondpic = $('.second-pic');
             element.on('click',function(){
-                element.width(element.width()*1.2);
-                element.height(element.height()*1.2);
+                firstpic.hide();
+                secondpic.show();
             });
         </script>
     </body>
