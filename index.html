@@ -11,6 +11,16 @@
             border-radius:15px;
         }
         
+        .boton-prueba:hover{
+            background-color:white;
+            color:black;
+        }
+
+        .boton-prueba:active{
+            background-color:white;
+            color:black;
+        }
+        
         html{
             background-color:green;
         }
@@ -22,7 +32,7 @@
             height:100vh;
         }
 
-        .second-pic{
+        .second-pic, .third-pic, .forth-pic, .text{
             display: none;
         }
 
@@ -37,18 +47,36 @@
         <div class="main-body">
             <img class="first-pic pic" src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyZnh6ZmZtbHNrZnBrZTUycnBkdm9pMWRqOHRjdDhkOG84dWJvMmcxOCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/eHWUyxudOQGCulzFFR/200w.gif"/>
             <img class="second-pic pic" src="https://media.baamboozle.com/uploads/images/436228/1628060927_64120_gif-url.gif"/>
+            <img class="third-pic pic" src="https://i.pinimg.com/originals/78/74/d1/7874d1e5815fa0ffa2604ebf5fbf2b08.gif"/>
+            <img class="forth-pic pic" src="https://i.pinimg.com/originals/d3/58/a6/d358a697bb35e9962b65f35b30ff689c.gif"/>
             <button class="boton-prueba">CLICK ME</button>
+            <text class="text">OK NO BUTTON FOR YOU!</text>
         </div>
         <script>
             var element = $('.boton-prueba');
             var firstpic = $('.first-pic');
             var secondpic = $('.second-pic');
+            var thirdpic = $('.third-pic');
+            var forthpic = $('.forth-pic');
             var botonprueba = $('.boton-prueba');
+            var texto = $('.text');
             element.on('click',function(){
                 firstpic.hide();
                 secondpic.show();
                 botonprueba.text("HURRAY!");
                 botonprueba.css('font-size','30px');
+                element.on('click',function(){
+                    secondpic.hide();
+                    thirdpic.show();
+                    botonprueba.text("DON'T CLICK AGAIN!");
+                    botonprueba.css('font-size','25px');
+                    element.on('click',function(){
+                        thirdpic.hide();
+                        forthpic.show();
+                        botonprueba.hide();
+                        texto.show();
+                    });
+                })
             });
         </script>
     </body>
