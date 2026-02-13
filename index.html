@@ -29,7 +29,14 @@
             display:flex;
             justify-content:center;
             align-items:center;
-            height:100vh;
+            flex-wrap: wrap;
+            vertical-align: middle;
+            margin-top:20%;
+        }
+
+        .content{
+            flex-basis: 100%;
+            text-align: center;
         }
 
         .second-pic, .third-pic, .forth-pic, .text{
@@ -49,8 +56,10 @@
             <img class="second-pic pic" src="https://media.baamboozle.com/uploads/images/436228/1628060927_64120_gif-url.gif"/>
             <img class="third-pic pic" src="https://i.pinimg.com/originals/78/74/d1/7874d1e5815fa0ffa2604ebf5fbf2b08.gif"/>
             <img class="forth-pic pic" src="https://i.pinimg.com/originals/d3/58/a6/d358a697bb35e9962b65f35b30ff689c.gif"/>
-            <button class="boton-prueba">CLICK ME</button>
-            <text class="text">OK NO BUTTON FOR YOU!</text>
+            <div class="content">
+                <button class="boton-prueba">CLICK ME</button>
+                <text class="text">OK NO BUTTON FOR YOU!</text>
+            </div>
         </div>
         <script>
             var element = $('.boton-prueba');
